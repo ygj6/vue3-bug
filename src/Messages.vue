@@ -1,9 +1,9 @@
 <template>
   <button @click="click">Toggle chat</button><br>
 
-  <RouterView v-slot="{ Component }">
+  <RouterView v-slot="{ Component, route }">
     <KeepAlive>
-      <component :is="Component" :key="id" />
+      <component :is="Component" :key="route.name" />
     </KeepAlive>
   </RouterView>
 </template>
